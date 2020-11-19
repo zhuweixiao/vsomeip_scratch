@@ -1,3 +1,4 @@
+Server:
 2020-11-19 14:29:22.993058 [info] Parsed vsomeip configuration in 0ms                                 
 2020-11-19 14:29:22.993140 [info] Using configuration file: "../helloworld-local.json".               // default json file to configure
 2020-11-19 14:29:22.993165 [info] Default configuration module loaded.
@@ -32,11 +33,11 @@
 2020-11-19 14:30:32.997090 [info] vSomeIP 2.10.21 | (default)
 2020-11-19 14:30:42.997429 [info] vSomeIP 2.10.21 | (default)
 2020-11-19 14:30:52.997709 [info] vSomeIP 2.10.21 | (default)                                            // another Terminal: start client
-2020-11-19 14:30:58.861063 [info] Application/Client 5555 is registering.                                //
-2020-11-19 14:30:58.861133 [info] Client [4444] is connecting to [5555] at /tmp/vsomeip-5555             // service connecting to client ...4 
-2020-11-19 14:30:58.861389 [info] REGISTERED_ACK(5555)                                                   // service knows, registered ack
-2020-11-19 14:30:58.871702 [info] REQUEST(5555): [1111.2222:255.4294967295]                              // receive request, send response
-2020-11-19 14:30:58.873464 [info] RELEASE(5555): [1111.2222]                                             // app_->release_service, release the service
+2020-11-19 14:30:58.861063 [info] Application/Client 5555 is registering.                                // ...3
+2020-11-19 14:30:58.861133 [info] Client [4444] is connecting to [5555] at /tmp/vsomeip-5555             // service connecting to client    ...4 
+2020-11-19 14:30:58.861389 [info] REGISTERED_ACK(5555)                                                   // service knows, registered ack   ...6
+2020-11-19 14:30:58.871702 [info] REQUEST(5555): [1111.2222:255.4294967295]                              // receive request, send response  ...7
+2020-11-19 14:30:58.873464 [info] RELEASE(5555): [1111.2222]                                             // app_->release_service, release the service ...11
 2020-11-19 14:30:58.874719 [info] Application/Client 5555 is deregistering.
 2020-11-19 14:30:58.885347 [info] Client [4444] is closing connection to [5555]
 2020-11-19 14:31:02.998092 [info] vSomeIP 2.10.21 | (default)
@@ -44,7 +45,7 @@
 2020-11-19 14:31:03.873822 [info] Stopping vsomeip application "hello_world_service".
 2020-11-19 14:31:03.875193 [info] utility::auto_configuration_exit: munmap succeeded.
 
-
+Client:
 2020-11-19 14:30:58.860075 [info] Parsed vsomeip configuration in 0ms
 2020-11-19 14:30:58.860200 [info] Using configuration file: "../helloworld-local.json".
 2020-11-19 14:30:58.860249 [info] Default configuration module loaded.
@@ -62,11 +63,11 @@
 2020-11-19 14:30:58.860982 [info] Client 5555 successfully connected to routing  ~> registering..                                    // client connecting to routing manager ...1
 2020-11-19 14:30:58.860909 [info] main dispatch thread id from application: 5555 (hello_world_client) is: 7f9e36503700 TID: 31012    // ...2
 2020-11-19 14:30:58.861287 [info] Application/Client 5555 is registered.                                // client is registered ...5
-2020-11-19 14:30:58.872094 [info] ON_AVAILABLE(5555): [1111.2222:1.0]                                   // service is available, service id: 1111, service instance id: 2222
+2020-11-19 14:30:58.872094 [info] ON_AVAILABLE(5555): [1111.2222:1.0]                                   // service is available, service id: 1111, service instance id: 2222 ...8
 Sending: World                                                                                          // send Request 
-2020-11-19 14:30:58.872373 [info] Client [5555] is connecting to [4444] at /tmp/vsomeip-4444
-Received: Hello World                                                                                   // receive response, std::cout
-2020-11-19 14:30:58.873448 [info] Stopping vsomeip application "hello_world_client".                    // stop()
+2020-11-19 14:30:58.872373 [info] Client [5555] is connecting to [4444] at /tmp/vsomeip-4444            // ...9
+Received: Hello World                                                                                   // receive response, std::cout 
+2020-11-19 14:30:58.873448 [info] Stopping vsomeip application "hello_world_client".                    // stop() ...10
 2020-11-19 14:30:58.875134 [info] Application/Client 5555 is deregistered.                              // app_->stop()
 2020-11-19 14:30:58.875488 [info] Client [5555] is closing connection to [4444]
-2020-11-19 14:30:58.876212 [info] utility::auto_configuration_exit: munmap succeeded.
+2020-11-19 14:30:58.876212 [info] utility::auto_configuration_exit: munmap succeeded. 
